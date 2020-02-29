@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="package_remove_task_title">Fjern</string>
+  <string name="package_inspect_item_title">Info om app</string>
+  <string name="start_on_boot_title">Start ved oppstart</string>
+  <string name="start_on_boot_summary">Aktivering når enheten starter</string>
+  <string name="opacity_title">Transparens</string>
+  <string name="opacity_summary">Bakgrunnstransparens av overleggsvisning</string>
+  <string name="animate_title">Animere</string>
+  <string name="animate_title_summary">Animasjon når du viser/ gjemmer</string>
+  <string name="adjust_handle_help">Flytte og skaleringshåndtak</string>
+  <string name="icon_size_normal">Vanlig</string>
+  <string name="icon_size_small">Liten</string>
+  <string name="icon_size_large">Stor</string>
+  <string name="icon_size_title">Ikonstørrelse</string>
+  <string name="ok">OK</string>
+  <string name="cancel">Avbryt</string>
+  <string name="drag_handle_color_title">Farge</string>
+  <string name="drag_handle_color_dialog_title">Farge</string>
+  <string name="service_background_processes"><xliff:g id="memory">%1$s</xliff:g> ledig</string>
+  <string name="service_foreground_processes"><xliff:g id="memory">%1$s</xliff:g> brukt</string>
+  <string name="show_rambar_title">Vis minneforbruk</string>
+  <string name="show_rambar_summary">Vis ledig og brukt minne</string>
+  <string name="show_app_labels">Vis app navn</string>
+  <string name="show_app_labels_summary">App navn vises med ikonet</string>
+  <string name="category_overlay_title">Overlegg</string>
+  <string name="category_drag_handle_title">Skaleringshåndtak</string>
+  <string name="category_favorite_title">Favoritter</string>
+  <string name="favorite_apps_config_title">Administrere favoritter</string>
+  <string name="favorite_apps_config_summary">Velg apper i favorittvisning</string>
+  <string name="favorite_apps_add_dialog_title">Legg til apper</string>
+  <string name="favorite_add">Legg til\u2026</string>
+  <string name="location_left">Venstre</string>
+  <string name="location_right">Høyre</string>
+  <string name="reset">Standard</string>
+  <string name="toggle_last_app">Siste app</string>
+  <string name="toggle_last_app_help">Bytte til forrige app</string>
+  <string name="kill_all_apps_help">Avslutt alle apper</string>
+  <string name="kill_other_apps_help">Avslutt andre apper</string>
+  <string name="settings_help">Innstillinger</string>
+  <string name="home_help">Hjem</string>
+  <string name="kill_all_apps">Avslutt alle</string>
+  <string name="kill_other_apps">Avslutt andre</string>
+  <string name="settings">Innstillinger</string>
+  <string name="home">Hjem</string>
+  <string name="buttons_title">Knapper</string>
+  <string name="buttons_summary">Konfigurer handlingsknapper i overlappingsvisning</string>
+  <string name="auto_hide_handle">Skjul automatisk</string>
+  <string name="auto_hide_handle_summary">To sveip for vise overlappingsvisning</string>
+  <string name="no_recent_apps_title">Ingen nylige apper</string>
+  <string name="drag_handle_opacity_title">Transparens</string>
+  <string name="drag_handle_enable_title">Aktiver</string>
+  <string name="drag_handle_enable_summary">Kun deaktivering, ved bruk av annen aktiveringsmetode</string>
+  <string name="allapps_help">App skuff</string>
+  <string name="allapps">Apper</string>
+  <string name="dim_behind_title">Demp bakgrunn</string>
+  <string name="dim_behind_summary">Bruke transparens for å fylle skjerm</string>
+  <string name="gravity_title">Vannrett gravitasjon</string>
+  <string name="gravity_center">Sentrere</string>
+  <string name="gravity_drag">Skaleringshåndtak side</string>
+  <string name="dialog_pick_iconpack_title">Velg ikonpakke</string>
+  <string name="default_iconpack_title">Standardikoner</string>
+  <string name="icon_packs_title">Ikonpakker</string>
+  <string name="no_iconpacks_summary">Ingen ikonpakker installert</string>
+  <string name="icon_pack_title">Ikonpakke</string>
+  <string name="icon_pack_summary">Bruk ikonpakke for app ikoner</string>
+  <string name="category_speed_switcher_title">Hurtigveksler</string>
+  <string name="speed_switcher_enable_summary">Langt trykk på skaleringshåndtak for aktivering</string>
+  <string name="speed_switcher_enable_title">Aktiver</string>
+  <string name="back">Tilbake</string>
+  <string name="back_help">Tilbake</string>
+  <string name="kill_current">Avslutt gjeldende</string>
+  <string name="kill_current_help">Avslutt gjeldende app</string>
+  <string name="speed_switch_color_summary">Blå - siste apper. Grønn - favoritter. Rød - handlinger</string>
+  <string name="speed_switch_color">Styrke på bakgrunnsfarge</string>
+  <string name="speed_switch_limit_summary">Begrens område for endringer</string>
+  <string name="speed_switch_limit">Nivåendringsområde</string>
+  <string name="speed_switch_button_title">Knapper</string>
+  <string name="speed_switch_button_summary">Konfigurer handlingsknapper i hurtigvekslervisning</string>
+  <string name="speed_switch_items_summary">Maksimalt antall nivå elementer</string>
+  <string name="speed_switch_item">Nivå elementgrense</string>
+  <string name="immersive_mode">Fullskjermmodus</string>
+  <string name="immersive_mode_help">Bryter: Fullskjermmodus</string>
+  <string name="package_add_favorite_title">Legg til favoritter</string>
+  <string name="package_remove_favorite_title">Fjern fra favoritter</string>
+  <string name="open_favorite_help">Åpne/lukk favorittvisning</string>
+  <string name="button_pos_title">Knappeposisjon</string>
+  <string name="button_pos_top">Øverst til venstre</string>
+  <string name="button_pos_bottom">Nederst til høyre</string>
+  <string name="bg_style_solid_light">Lyst</string>
+  <string name="bg_style_solid_dark">Mørk</string>
+  <string name="bg_style_transparent">Transparent</string>
+  <string name="bg_style_title">Bakgrunnsstil</string>
+  <string name="lock_to_app">Feste app</string>
+  <string name="lock_app_help">Feste gjeldende app</string>
+  <string name="app_filter_category_title">Appfilter</string>
+  <string name="app_filter_boot_title">Aktiv siden oppstart</string>
+  <string name="layout_style_title">Stil</string>
+  <string name="layout_style_1">Vannrett</string>
+  <string name="layout_style_2">Loddrett</string>
+  <string name="no_limit">Ingen grense</string>
+  <string name="one_hour">1 time</string>
+  <string name="three_hours">3 timer</string>
+  <string name="six_hours">6 timer</string>
+  <string name="twelve_hours">12 timer</string>
+  <string name="one_day">1 dag</string>
+  <string name="two_days">2 dager</string>
+  <string name="one_week">1 uke</string>
+  <string name="app_filter_time_title">Aktiv siden</string>
+  <string name="close_help">Lukk overlegg</string>
+  <string name="close">Lukk</string>
+  <string name="thumb_size_title">Miniatyrbilde størrelse</string>
+  <string name="thumb_size_normal">Vanlig</string>
+  <string name="thumb_size_small">Liten</string>
+  <string name="thumb_size_medium">Middels</string>
+  <string name="package_lock_task_title">Feste app</string>
+  <string name="lock_app_not_enabled">Skjermfesting er ikke aktivert i sikkerhetsinnstillinger</string>
+  <string name="app_filter_running_title">Bare kjørende</string>
+  <string name="menu">Meny</string>
+  <string name="menu_help">Meny</string>
+  <string name="enable_title">Aktiver</string>
+  <string name="adjust_handle_width">Bredde</string>
+  <string name="adjust_handle_position">Posisjon</string>
+  <string name="package_top_task_title">Topp</string>
+  <string name="package_left_task_title">Venstre</string>
+  <string name="package_bottom_task_title">Bunn</string>
+  <string name="package_right_task_title">Høyre</string>
+  <string name="package_full_task_title">Full størrelse</string>
+  <string name="shortcut_label_toggle_overlay">Vis/Skjul overlegg</string>
+  <string name="adjust_handle_title_new">Konfigurere skaleringshåndtak</string>
+  <string name="adjust_handle_summary">Konfigurere posisjon, størrelse og farge</string>
+  <string name="settings_button_text">Innstillinger</string>
+  <string name="wallpaper_button_text">Bakgrunn</string>
+  <string name="launcher_mode_summary">Kjøre OmniSwitch som programvelger. Etter aktivering trykk hjem og velg OmniSwitch</string>
+  <string name="launcher_mode_title">Aktiver</string>
+  <string name="welcome_cling_header">Velkommen til OmniSwitch programvelgermodus</string>
+  <string name="welcome_cling_description">Ha det gøy med en minimalistisk programvelger som fokuserer på app-aktivering og -bytting. Sveip for å åpne OmniSwitch.</string>
+  <string name="welcome_cling_dismiss">Oppfattet</string>
+  <string name="launch_stats_title">Oppstart statistikker</string>
+  <string name="launch_stats_summary">Samle statistikk om startede apper. Data vil ikke deles og lagres bare lokalt</string>
+  <string name="launch_stats_delete_title">Fjern statistikk</string>
+  <string name="launch_stats_delete_summary">Tøm gjeldende lanseringenstatistikk</string>
+  <string name="favorite_apps_config_stat_title">Populær statistikk</string>
+  <string name="favorite_apps_config_stat_summary">Opprette en favorittliste basert på samlet oppstartsstatistikk</string>
+  <string name="launch_stats_delete_notice">Oppstart statistikk fjernet</string>
+  <string name="launch_stats_low_title">Administrere favoritter</string>
+  <string name="launch_stats_low_notice">Ikke nok data til å opprette favorittappliste. Ønsker du virkelig å fortsette?</string>
+  <string name="revert_recents_summary">Fyll siste apper fra bunn</string>
+  <string name="revert_recents_title">Gjenopprett nylig app liste</string>
+  <string name="dialog_overlay_perms_title">OmniSwitch tilgangsfeil</string>
+  <string name="dialog_overlay_perms_msg">Aktiver \u0022trekke over andre apper\u0022 tillatelse</string>
+  <string name="package_dock_task_title">Forankringstasjon</string>
+  <string name="package_undock_task_title">Bryte forankring</string>
+  <string name="dim_action_buttons_summary">Gi ekstra bakgrunnsdemping til handlingsknapper</string>
+  <string name="dim_action_buttons_title">Demp handlingsknapp bakgrunn</string>
+  <string name="package_force_stop_title">Tving avslutning</string>
+  <string name="package_lock_app_title">Lås app</string>
+  <string name="package_unlock_app_title">Lås opp app</string>
+  <string name="locked_apps_sort_summary">Låste apper vises først i liste</string>
+  <string name="locked_apps_sort_title">Sorter låste apper</string>
+</resources>

@@ -1,0 +1,307 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:1-121:12
+	package
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:4:5-37
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:6:5-30
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:2:11-69
+	coreApp
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:3:5-19
+	android:versionCode
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:5:5-28
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.REAL_GET_TASKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:8:5-73
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:8:22-70
+uses-permission#android.permission.GET_DETAILED_TASKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:9:22-74
+uses-permission#android.permission.REORDER_TASKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:10:5-72
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:10:22-69
+uses-permission#android.permission.REMOVE_TASKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:11:22-68
+uses-permission#android.permission.START_ANY_ACTIVITY
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:12:5-77
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:12:22-74
+uses-permission#android.permission.GET_TOP_ACTIVITY_INFO
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:13:22-77
+uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:14:5-84
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:14:22-81
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:15:5-78
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:15:22-75
+uses-permission#android.permission.STOP_APP_SWITCHES
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.MANAGE_USERS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:18:5-71
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:18:22-68
+uses-permission#android.permission.INTERNAL_SYSTEM_WINDOW
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:19:22-78
+uses-permission#android.permission.READ_FRAME_BUFFER
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:20:5-76
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:20:22-73
+uses-permission#android.permission.INJECT_EVENTS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:21:5-72
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:21:22-69
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:22:5-73
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:22:22-70
+uses-permission#android.permission.MANAGE_ACTIVITY_STACKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:23:22-78
+uses-permission#android.permission.START_TASKS_FROM_RECENTS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:24:22-80
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:25:5-75
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:25:22-72
+uses-permission#android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:26:5-91
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:26:22-88
+uses-permission#android.permission.SET_WALLPAPER_HINTS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:27:5-78
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:27:22-75
+uses-permission#android.permission.FORCE_STOP_PACKAGES
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:28:5-78
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:28:22-75
+uses-permission#android.permission.DEVICE_POWER
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:29:5-71
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:29:22-68
+uses-permission#android.permission.CHANGE_OVERLAY_PACKAGES
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:30:5-82
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:30:22-79
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:31:5-71
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:31:22-69
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:32:5-71
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:32:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:33:5-72
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:33:22-70
+uses-permission#org.omnirom.omnijaws.READ_WEATHER
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:34:5-73
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:34:22-70
+uses-sdk
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+	android:targetSdkVersion
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:36:5-17
+		INJECTED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml
+application
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:37:5-120:19
+	android:label
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:40:9-41
+	android:hardwareAccelerated
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:43:9-43
+	android:persistent
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:41:9-34
+	android:icon
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:39:9-43
+	android:allowBackup
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:44:9-35
+	android:theme
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:42:9-40
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:38:9-35
+service#org.omnirom.omniswitch.SwitchService
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:45:9-47:69
+	android:configChanges
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:47:13-66
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:46:13-64
+receiver#org.omnirom.omniswitch.SwitchService$RecentsReceiver
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:48:9-56:20
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:48:19-86
+intent-filter#action:name:org.omnirom.omniswitch.ACTION_HIDE_OVERLAY+action:name:org.omnirom.omniswitch.ACTION_PRELOAD_TASKS+action:name:org.omnirom.omniswitch.ACTION_RESTORE_HOME_STACK+action:name:org.omnirom.omniswitch.ACTION_TOGGLE_OVERLAY+action:name:org.omnirom.omniswitch.ACTION_TOGGLE_OVERLAY2
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:49:13-55:29
+action#org.omnirom.omniswitch.ACTION_TOGGLE_OVERLAY
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:50:17-87
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:50:25-84
+action#org.omnirom.omniswitch.ACTION_TOGGLE_OVERLAY2
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:51:17-88
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:51:25-85
+action#org.omnirom.omniswitch.ACTION_RESTORE_HOME_STACK
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:52:17-91
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:52:25-88
+action#org.omnirom.omniswitch.ACTION_PRELOAD_TASKS
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:53:17-86
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:53:25-83
+action#org.omnirom.omniswitch.ACTION_HIDE_OVERLAY
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:54:17-85
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:54:25-82
+activity#org.omnirom.omniswitch.SettingsActivity
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:57:9-66:20
+	android:launchMode
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:59:13-48
+	android:theme
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:60:13-49
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:58:13-67
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:61:13-65:29
+action#android.intent.action.MAIN
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:62:17-69
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:62:25-66
+category#android.intent.category.DEFAULT
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:63:17-76
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:63:27-73
+category#android.intent.category.LAUNCHER
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:64:17-77
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:64:27-74
+activity#org.omnirom.omniswitch.ToggleActivity
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:67:9-74:20
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:68:13-65
+intent-filter#action:name:android.intent.action.CREATE_SHORTCUT+action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:69:13-73:29
+action#android.intent.action.CREATE_SHORTCUT
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:71:17-80
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:71:25-77
+activity#org.omnirom.omniswitch.PlaceholderActivity
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:75:9-84:20
+	android:excludeFromRecents
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:78:13-46
+	android:launchMode
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:77:13-48
+	android:theme
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:79:13-52
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:76:13-70
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:80:13-83:29
+receiver#org.omnirom.omniswitch.BootReceiver
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:85:9-89:20
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:85:19-69
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:86:13-88:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:87:17-79
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:87:25-76
+receiver#org.omnirom.omniswitch.PackageReceiver
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:90:9-97:20
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:90:19-72
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_CHANGED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:91:13-96:29
+action#android.intent.action.PACKAGE_CHANGED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:92:17-80
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:92:25-77
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:93:17-80
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:93:25-77
+action#android.intent.action.PACKAGE_ADDED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:94:17-78
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:94:25-75
+data
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:95:17-50
+	android:scheme
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:95:23-47
+receiver#org.omnirom.omniswitch.LocaleChangeReceiver
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:99:9-103:20
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:99:19-77
+intent-filter#action:name:android.intent.action.LOCALE_CHANGED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:100:13-102:29
+action#android.intent.action.LOCALE_CHANGED
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:101:17-78
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:101:25-76
+activity#org.omnirom.omniswitch.launcher.Launcher
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:104:9-119:20
+	android:enabled
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:112:13-36
+	android:clearTaskOnLaunch
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:108:13-45
+	android:stateNotNeeded
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:107:13-42
+	android:excludeFromRecents
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:109:13-46
+	android:launchMode
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:106:13-44
+	android:configChanges
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:113:13-59
+	android:theme
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:111:13-49
+	android:taskAffinity
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:110:13-36
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:105:13-68
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:114:13-118:29
+category#android.intent.category.HOME
+ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:116:17-73
+	android:name
+		ADDED from /mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/AndroidManifest.xml:116:27-70

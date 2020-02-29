@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw720dp-v13/values-sw720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/res/values-sw720dp/dimens.xml",
+                    "from": {
+                        "startLines": "20,19",
+                        "startColumns": "1,1",
+                        "startOffsets": "781,736",
+                        "endColumns": "45,44",
+                        "endOffsets": "825,779"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,104",
+                        "endColumns": "48,47",
+                        "endOffsets": "99,147"
+                    }
+                }
+            ]
+        }
+    ]
+}

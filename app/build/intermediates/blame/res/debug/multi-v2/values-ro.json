@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml",
+            "map": [
+                {
+                    "source": "/mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/src/main/res/values-ro/strings.xml",
+                    "from": {
+                        "startLines": "21,20,19,18",
+                        "startColumns": "2,2,2,2",
+                        "startOffsets": "974,924,850,788",
+                        "endColumns": "49,49,73,61",
+                        "endOffsets": "1021,971,921,847"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,107,159,235",
+                        "endColumns": "51,51,75,63",
+                        "endOffsets": "102,154,230,294"
+                    }
+                }
+            ]
+        }
+    ]
+}

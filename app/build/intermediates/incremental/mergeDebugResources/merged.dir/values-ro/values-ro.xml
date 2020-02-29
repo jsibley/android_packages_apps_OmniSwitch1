@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_size_normal">Normal</string>
+    <string name="opacity_title">Opacitate</string>
+    <string name="package_inspect_item_title">Informaţii aplicaţie</string>
+    <string name="package_remove_task_title">Eliminaţi</string>
+</resources>
