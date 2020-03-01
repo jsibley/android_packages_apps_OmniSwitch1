@@ -82,7 +82,7 @@ public class SwitchService extends Service {
             if(mConfiguration.mRestrictedMode){
                 createErrorNotification();
             }
-            mUserId = UserHandle.myUserId();
+//            mUserId = UserHandle.myUserId();
             Log.d(TAG, "started SwitchService " + mUserId);
 
             mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -103,7 +103,7 @@ public class SwitchService extends Service {
             IntentFilter filter = new IntentFilter();
             filter.addAction(RecentsReceiver.ACTION_HANDLE_HIDE);
             filter.addAction(RecentsReceiver.ACTION_HANDLE_SHOW);
-            filter.addAction(Intent.ACTION_USER_SWITCHED);
+//            filter.addAction(Intent.ACTION_USER_SWITCHED);
             filter.addAction(Intent.ACTION_SHUTDOWN);
 
             registerReceiver(mReceiver, filter);
@@ -228,16 +228,16 @@ public class SwitchService extends Service {
                     if (mManager.isShowing()) {
                         mManager.hide(false);
                     }
-                } else if (Intent.ACTION_USER_SWITCHED.equals(action)) {
-                    int userId = intent.getIntExtra(Intent.EXTRA_USER_HANDLE, -1);
-                    Log.d(TAG, "user switch " + mUserId + "->" + userId);
-                    if (userId != mUserId){
-                        mManager.getSwitchGestureView().hide();
-                    } else {
-                        if (mConfiguration.mDragHandleShow){
-                            mManager.getSwitchGestureView().show();
-                        }
-                    }
+//                } else if (Intent.ACTION_USER_SWITCHED.equals(action)) {
+//                    int userId = intent.getIntExtra(Intent.EXTRA_USER_HANDLE, -1);
+//                    Log.d(TAG, "user switch " + mUserId + "->" + userId);
+//                    if (userId != mUserId){
+//                        mManager.getSwitchGestureView().hide();
+//                    } else {
+//                        if (mConfiguration.mDragHandleShow){
+//                            mManager.getSwitchGestureView().show();
+//                        }
+//                    }
                 } else if (Intent.ACTION_SHUTDOWN.equals(action)) {
                     Log.d(TAG, "ACTION_SHUTDOWN");
                     mManager.shutdownService();

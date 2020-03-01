@@ -390,9 +390,10 @@ public class SwitchConfiguration {
     }
 
     private boolean hasSystemPermission(Context context) {
-        int result = context
-                .checkCallingOrSelfPermission(android.Manifest.permission.REMOVE_TASKS);
-        return result == android.content.pm.PackageManager.PERMISSION_GRANTED;
+//        int result = context
+//                .checkCallingOrSelfPermission(android.Manifest.permission.REMOVE_TASKS);
+//        return result == android.content.pm.PackageManager.PERMISSION_GRANTED;
+        return true;
     }
 
     public int calcHorizontalDivider(boolean fullscreen) {

@@ -1,0 +1,4 @@
+#Sat Feb 29 21:32:47 PST 2020
+base.0=/mnt/sda6/checkouts/android_packages_apps_OmniSwitch1/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

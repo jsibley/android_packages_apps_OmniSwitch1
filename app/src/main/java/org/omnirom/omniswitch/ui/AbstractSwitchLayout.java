@@ -536,7 +536,7 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
                                 Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    mRecentsManager.toggleLockToApp(mAutoClose);
+//                    mRecentsManager.toggleLockToApp(mAutoClose);
                 }
             });
             mLockToAppButton
@@ -608,7 +608,7 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
             mPhoneButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     hide(true);
-                    Utils.openPhone(mContext);
+//                    Utils.openPhone(mContext);
                 }
             });
             return mPhoneButton;
@@ -916,7 +916,7 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
                 if (item.getItemId() == R.id.package_stop_task) {
                     mRecentsManager.killTask(ad, true);
                 } else if (item.getItemId() == R.id.package_force_stop) {
-                    mRecentsManager.forceStop(ad, true);
+//                    mRecentsManager.forceStop(ad, true);
                 } else if (item.getItemId() == R.id.package_inspect_item) {
                     mRecentsManager.startApplicationDetailsActivity(ad
                             .getPackageName());
@@ -932,8 +932,8 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
                     if (!Utils.isLockToAppEnabled(mContext)) {
                         return false;
                     }
-                    mRecentsManager.stopLockToApp(false);
-                    mRecentsManager.lockToApp(ad, mAutoClose);
+//                    mRecentsManager.stopLockToApp(false);
+//                    mRecentsManager.lockToApp(ad, mAutoClose);
                 } else if (item.getItemId() == R.id.package_dock_task) {
                     mRecentsManager.dockTask(ad, mAutoClose);
                 } else {
@@ -1088,13 +1088,13 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
         mRecentsManager.getSwitchGestureView().overlayHidden();
 
         // run back trigger if required
-        if (mVirtualBackKey && !mConfiguration.mRestrictedMode) {
-            Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_BACK);
-        }
-        mVirtualBackKey = false;
-        if (mVirtualMenuKey && !mConfiguration.mRestrictedMode) {
-            Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_MENU);
-        }
+//        if (mVirtualBackKey && !mConfiguration.mRestrictedMode) {
+//            Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_BACK);
+//        }
+//        mVirtualBackKey = false;
+//        if (mVirtualMenuKey && !mConfiguration.mRestrictedMode) {
+//            Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_MENU);
+//        }
         mVirtualMenuKey = false;
     }
 
@@ -1208,7 +1208,7 @@ public abstract class AbstractSwitchLayout implements ISwitchLayout {
             updateRamDisplay();
         }
         afterShowDone();
-        mRecentsManager.stopBoost();
+//        mRecentsManager.stopBoost();
     }
 
     @Override

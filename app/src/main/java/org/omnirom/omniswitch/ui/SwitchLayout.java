@@ -481,8 +481,8 @@ public class SwitchLayout extends AbstractSwitchLayout {
         }
         mAppDrawer.setLayoutParams(getAppDrawerParams());
         mCurrentHeight = mRecentsOrAppDrawer.getHeight();
-        int recentsHeight = mCurrentHeight;
-        int appDrawerHeight = getAppDrawerParams().height;
+        final int recentsHeight = mCurrentHeight;
+        final int appDrawerHeight = getAppDrawerParams().height;
 
         mAppDrawer.setTranslationY(-appDrawerHeight);
         mAppDrawer.setVisibility(View.VISIBLE);
@@ -538,8 +538,8 @@ public class SwitchLayout extends AbstractSwitchLayout {
         if (mShowFavAnim != null) {
             mShowFavAnim.cancel();
         }
-        int appDrawerHeight = getAppDrawerParams().height;
-        int recentsHeight = mCurrentHeight;
+        final int appDrawerHeight = getAppDrawerParams().height;
+        final int recentsHeight = mCurrentHeight;
 
         ValueAnimator collapseAnimator = ValueAnimator.ofInt(0, appDrawerHeight);
         collapseAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

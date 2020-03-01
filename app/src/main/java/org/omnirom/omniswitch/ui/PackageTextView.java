@@ -41,6 +41,7 @@ public class PackageTextView extends TextView {
     private String mLabel;
     private Runnable mAction;
     private Handler mHandler = new Handler();
+    public Context mContext = getContext();
 
     public PackageTextView(Context context) {
         super(context);

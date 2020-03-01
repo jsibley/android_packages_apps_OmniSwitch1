@@ -67,6 +67,7 @@ public class CurrentWeatherView extends FrameLayout implements OmniJawsClient.Om
     private ImageView mEmptyViewImage;
     private TopWidgetView mTopWidget;
     private DetailedWeatherView mDetailedWeatherView;
+    public Context mContext = getContext();
 
     public CurrentWeatherView(Context context) {
         this(context, null);

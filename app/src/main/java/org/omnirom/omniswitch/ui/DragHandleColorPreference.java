@@ -50,7 +50,8 @@ public class DragHandleColorPreference extends Preference implements DialogInter
      * @param attrs
      */
     public DragHandleColorPreference(Context context, AttributeSet attrs) {
-        super(context, attrs, com.android.internal.R.attr.preferenceStyle);
+//        super(context, attrs, com.android.internal.R.attr.preferenceStyle);
+        super(context, attrs, android.R.attr.preferenceStyle);
         mConfiguration = SwitchConfiguration.getInstance(context);
         mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         mColorValue = mPrefs.getInt(SettingsActivity.PREF_DRAG_HANDLE_COLOR_NEW,

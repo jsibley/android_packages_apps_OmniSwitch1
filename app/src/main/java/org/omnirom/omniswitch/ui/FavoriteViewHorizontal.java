@@ -65,6 +65,7 @@ public class FavoriteViewHorizontal extends HorizontalListView {
     protected List<String> mFavoriteList;
     private SwitchManager mRecentsManager;
     private Typeface mLabelFont;
+    public Context mContext = getContext();
 
     public class FavoriteListAdapter extends ArrayAdapter<String> {
 

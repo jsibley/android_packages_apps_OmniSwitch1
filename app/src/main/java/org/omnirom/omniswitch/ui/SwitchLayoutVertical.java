@@ -409,9 +409,9 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
 
     @Override
     protected FrameLayout.LayoutParams getAppDrawerParams() {
-        int appDrawerWidth = getAppDrawerWidth();
-        int recentsWith = getRecentsWidth();
-        appDrawerWidth = Math.max(appDrawerWidth, recentsWith);
+//        int appDrawerWidth = getAppDrawerWidth();
+        final int recentsWith = getRecentsWidth();
+        final int appDrawerWidth = Math.max(getAppDrawerWidth(), recentsWith);
         return new FrameLayout.LayoutParams(appDrawerWidth,
                 FrameLayout.LayoutParams.MATCH_PARENT);
     }
@@ -518,8 +518,8 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         if (mAppDrawerAnim != null) {
             mAppDrawerAnim.cancel();
         }
-        int appDrawerWidth = getAppDrawerParams().width;
-        int recentsWidth = getDefaultViewWidth();
+        final int appDrawerWidth = getAppDrawerParams().width;
+        final int recentsWidth = getDefaultViewWidth();
 
         mAppDrawer.setLayoutParams(getAppDrawerParams());
         mAppDrawer.setTranslationX(mConfiguration.mLocation == 0 ? appDrawerWidth : -appDrawerWidth);
@@ -588,7 +588,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         if (mAppDrawerAnim != null) {
             mAppDrawerAnim.cancel();
         }
-        int appDrawerWidth = getAppDrawerParams().width;
+        final int appDrawerWidth = getAppDrawerParams().width;
         final int recentsWidth = getDefaultViewWidth();
 
         final boolean resizeUpfront = mConfiguration.mLocation == 0 ?

@@ -51,6 +51,7 @@ public class ThumbnailTaskView extends View implements TaskDescription.ThumbChan
     private float mThumbRatio = 1.0f;
     private static Bitmap sDefaultThumb;
     private SwitchConfiguration mConfiguration;
+    public Context mContext = getContext();
 
     public ThumbnailTaskView(Context context) {
         super(context);
@@ -197,7 +198,7 @@ public class ThumbnailTaskView extends View implements TaskDescription.ThumbChan
         final int iconBorderSizePx = mConfiguration.getOverlayHeaderWidth();
         Resources resources = getContext().getResources();
 
-        canvas.setHwBitmapsInSwModeEnabled(true);
+//        canvas.setHwBitmapsInSwModeEnabled(true);
         Bitmap taskThumb = getThumb();
         taskThumb.prepareToDraw();
         Drawable taskIcon = getIcon();

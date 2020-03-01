@@ -28,15 +28,16 @@ import org.omnirom.omniswitch.ui.SwitchGestureView;
 import org.omnirom.omniswitch.ui.SwitchLayout;
 import org.omnirom.omniswitch.ui.SwitchLayoutVertical;
 
+import android.app.Activity;
 import android.app.ActivityManager;
-import static android.app.ActivityTaskManager.SPLIT_SCREEN_CREATE_MODE_BOTTOM_OR_RIGHT;
-import static android.app.ActivityTaskManager.SPLIT_SCREEN_CREATE_MODE_TOP_OR_LEFT;
-import android.app.ActivityManagerNative;
+//import static android.app.ActivityTaskManager.SPLIT_SCREEN_CREATE_MODE_BOTTOM_OR_RIGHT;
+//import static android.app.ActivityTaskManager.SPLIT_SCREEN_CREATE_MODE_TOP_OR_LEFT;
+//import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
-import android.app.ActivityTaskManager;
-import android.app.IActivityManager;
+//import android.app.ActivityTaskManager;
+//import android.app.IActivityManager;
 import android.app.TaskStackBuilder;
-import static android.app.WindowConfiguration.WINDOWING_MODE_SPLIT_SCREEN_PRIMARY;
+//import static android.app.WindowConfiguration.WINDOWING_MODE_SPLIT_SCREEN_PRIMARY;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -48,8 +49,8 @@ import android.graphics.Rect;
 import android.net.Uri;
 import android.os.RemoteException;
 import android.os.PowerManager;
-import android.os.IPowerManager;
-import android.os.ServiceManager;
+//import android.os.IPowerManager;
+//import android.os.ServiceManager;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
@@ -65,16 +66,17 @@ public class SwitchManager {
     private SwitchConfiguration mConfiguration;
     private int mLayoutStyle;
     private final ActivityManager mAm;
-    private final IActivityManager mIAm;
-    private IPowerManager mPowerService;
+//    private final IActivityManager mIAm;
+//    private IPowerManager mPowerService;
 
     public SwitchManager(Context context, int layoutStyle) {
         mContext = context;
         mConfiguration = SwitchConfiguration.getInstance(mContext);
         mLayoutStyle = layoutStyle;
         mAm = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
-        mPowerService = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
-        mIAm = ActivityManager.getService();
+//        mPowerService = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
+        PowerManager mPowerService = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+//        mIAm = ActivityManager.getService();
         init();
     }
 
@@ -101,7 +103,7 @@ public class SwitchManager {
             if (DEBUG){
                 Log.d(TAG, "show");
             }
-            startBoost();
+//            startBoost();
             mLayout.setHandleRecentsUpdate(true);
 
             clearTasks();
@@ -130,7 +132,7 @@ public class SwitchManager {
             if (DEBUG){
                 Log.d(TAG, "beforePreloadTasks");
             }
-            startBoost();
+//            startBoost();
             clearTasks();
             mLayout.setHandleRecentsUpdate(true);
         }
@@ -210,8 +212,11 @@ public class SwitchManager {
             } else {
                 options = ActivityOptions.makeBasic();
             }
-            ActivityManagerNative.getDefault().startActivityFromRecents(
-                        ad.getPersistentTaskId(),  options.toBundle());
+//            ActivityManagerNative.getDefault().startActivityFromRecents(
+//                    ad.getPersistentTaskId(),  options.toBundle());
+            Activity act = new Activity();
+            act.startActivity(
+                    ad.getIntent(),  options.toBundle());
             SwitchStatistics.getInstance(mContext).traceStartIntent(ad.getIntent());
             if (DEBUG){
                 Log.d(TAG, "switch to " + ad.getLabel() + " " + ad.getStackId());
@@ -234,7 +239,7 @@ public class SwitchManager {
             toggleLockedApp(ad, ad.isLocked(), false);
         }
 
-        removeTask(ad.getPersistentTaskId());
+//        removeTask(ad.getPersistentTaskId());
         if (DEBUG){
             Log.d(TAG, "kill " + ad.getLabel());
         }
@@ -269,11 +274,11 @@ public class SwitchManager {
             if (ad.isLocked()) {
                 continue;
             }
-            removeTask(ad.getPersistentTaskId());
-            if (DEBUG){
-                Log.d(TAG, "kill " + ad.getLabel());
-            }
-            ad.setKilled();
+//            removeTask(ad.getPersistentTaskId());
+//            if (DEBUG){
+//                Log.d(TAG, "kill " + ad.getLabel());
+//            }
+//            ad.setKilled();
         }
         goHome(close);
     }
@@ -297,11 +302,11 @@ public class SwitchManager {
             if (ad.isLocked()) {
                 continue;
             }
-            removeTask(ad.getPersistentTaskId());
-            if (DEBUG){
-                Log.d(TAG, "kill " + ad.getLabel());
-            }
-            ad.setKilled();
+//            removeTask(ad.getPersistentTaskId());
+//            if (DEBUG){
+//                Log.d(TAG, "kill " + ad.getLabel());
+//            }
+//            ad.setKilled();
         }
         if(close){
             hide(true);
@@ -326,11 +331,11 @@ public class SwitchManager {
                 // remove from locked
                 toggleLockedApp(ad, ad.isLocked(), false);
             }
-            removeTask(ad.getPersistentTaskId());
-            if (DEBUG){
-                Log.d(TAG, "kill " + ad.getLabel());
-            }
-            ad.setKilled();
+//            removeTask(ad.getPersistentTaskId());
+//            if (DEBUG){
+//                Log.d(TAG, "kill " + ad.getLabel());
+//            }
+//            ad.setKilled();
         }
         if(close){
             hide(true);
@@ -376,7 +381,8 @@ public class SwitchManager {
             Intent intentapp = Intent.parseUri(intent, 0);
             ActivityInfo info = mContext.getPackageManager().getActivityInfo(intentapp.getComponent(), 0);
             if (info != null && DEBUG) {
-                Log.d(TAG, "startIntentFromtString resizable = "  + info.resizeMode);
+//                Log.d(TAG, "startIntentFromtString resizable = "  + info.resizeMode);
+                Log.d(TAG, "startIntentFromtString resizable = "  + info.launchMode);
             }
             if(close){
                 hide(true);
@@ -496,78 +502,78 @@ public class SwitchManager {
         }
     }
 
-    public void lockToCurrentApp(boolean close) {
-        TaskDescription ad = getCurrentTopTask();
-        if (ad != null) {
-            lockToApp(ad, close);
-        }
-    }
+//    public void lockToCurrentApp(boolean close) {
+//        TaskDescription ad = getCurrentTopTask();
+//        if (ad != null) {
+//            lockToApp(ad, close);
+//        }
+//    }
+//
+//    public void lockToApp(TaskDescription ad, boolean close) {
+//        try {
+//            if (!ActivityTaskManager.getService().isInLockTaskMode()) {
+//                switchTask(ad, false, false);
+//                ActivityTaskManager.getService().startSystemLockTaskMode(ad.getPersistentTaskId());
+//                if (DEBUG){
+//                    Log.d(TAG, "lock app " + ad.getLabel() + " " + ad.getPersistentTaskId());
+//                }
+//            }
+//        } catch(RemoteException e) {
+//        }
+//        if(close){
+//            hide(true);
+//        }
+//    }
+//
+//    public void stopLockToApp(boolean close) {
+//        try {
+//            if (ActivityTaskManager.getService().isInLockTaskMode()) {
+//                ActivityTaskManager.getService().stopSystemLockTaskMode();
+//                if (DEBUG){
+//                    Log.d(TAG, "stop lock app");
+//                }
+//            }
+//        } catch(RemoteException e) {
+//        }
+//        if(close){
+//            hide(true);
+//        }
+//    }
+//
+//    public void toggleLockToApp(boolean close) {
+//        try {
+//            if (ActivityTaskManager.getService().isInLockTaskMode()) {
+//                stopLockToApp(false);
+//            } else {
+//                lockToCurrentApp(false);
+//            }
+//        } catch(RemoteException e) {
+//        }
+//        if(close){
+//            hide(true);
+//        }
+//    }
 
-    public void lockToApp(TaskDescription ad, boolean close) {
-        try {
-            if (!ActivityTaskManager.getService().isInLockTaskMode()) {
-                switchTask(ad, false, false);
-                ActivityTaskManager.getService().startSystemLockTaskMode(ad.getPersistentTaskId());
-                if (DEBUG){
-                    Log.d(TAG, "lock app " + ad.getLabel() + " " + ad.getPersistentTaskId());
-                }
-            }
-        } catch(RemoteException e) {
-        }
-        if(close){
-            hide(true);
-        }
-    }
-
-    public void stopLockToApp(boolean close) {
-        try {
-            if (ActivityTaskManager.getService().isInLockTaskMode()) {
-                ActivityTaskManager.getService().stopSystemLockTaskMode();
-                if (DEBUG){
-                    Log.d(TAG, "stop lock app");
-                }
-            }
-        } catch(RemoteException e) {
-        }
-        if(close){
-            hide(true);
-        }
-    }
-
-    public void toggleLockToApp(boolean close) {
-        try {
-            if (ActivityTaskManager.getService().isInLockTaskMode()) {
-                stopLockToApp(false);
-            } else {
-                lockToCurrentApp(false);
-            }
-        } catch(RemoteException e) {
-        }
-        if(close){
-            hide(true);
-        }
-    }
-
-    public void forceStop(TaskDescription ad, boolean close) {
-        if (mConfiguration.mRestrictedMode){
-            return;
-        }
-
-        if(close){
-            hide(false);
-        }
-
-        mAm.forceStopPackage(ad.getPackageName());
-        if (DEBUG){
-            Log.d(TAG, "forceStop " + ad.getLabel());
-        }
-
-        if (!close) {
-            ad.setKilled();
-            removeTaskFromList(ad);
-            mLayout.refresh();
-        }
-    }
+//    public void forceStop(TaskDescription ad, boolean close) {
+//        if (mConfiguration.mRestrictedMode){
+//            return;
+//        }
+//
+//        if(close){
+//            hide(false);
+//        }
+//
+//        mAm.forceStopPackage(ad.getPackageName());
+//        if (DEBUG){
+//            Log.d(TAG, "forceStop " + ad.getLabel());
+//        }
+//
+//        if (!close) {
+//            ad.setKilled();
+//            removeTaskFromList(ad);
+//            mLayout.refresh();
+//        }
+//    }
 
     public void toggleLockedApp(TaskDescription ad, boolean isLockedApp, boolean refresh) {
         List<String> lockedAppsList = mConfiguration.mLockedAppList;
@@ -592,33 +598,33 @@ public class SwitchManager {
         mLayout.notifiyRecentsListChanged();
     }
 
-    public void startBoost() {
-        if (mConfiguration.mUsePowerHint) {
-            try {
-                // TODO 8 is the POWER_HINT_LAUNCH but there is no way to access this from here
-                mPowerService.powerHint(8, 1);
-            } catch (RemoteException e){
-            }
-        }
-    }
+//    public void startBoost() {
+//        if (mConfiguration.mUsePowerHint) {
+//            try {
+//                // TODO 8 is the POWER_HINT_LAUNCH but there is no way to access this from here
+//                mPowerService.powerHint(8, 1);
+//            } catch (RemoteException e){
+//            }
+//        }
+//    }
+//
+//    public void stopBoost() {
+//        if (mConfiguration.mUsePowerHint) {
+//            try {
+//                // TODO 8 is the POWER_HINT_LAUNCH
+//                mPowerService.powerHint(8, 0);
+//            } catch (RemoteException e){
+//            }
+//        }
+//    }
 
-    public void stopBoost() {
-        if (mConfiguration.mUsePowerHint) {
-            try {
-                // TODO 8 is the POWER_HINT_LAUNCH
-                mPowerService.powerHint(8, 0);
-            } catch (RemoteException e){
-            }
-        }
-    }
-
-    private void removeTask(int taskid) {
-        try {
-            mIAm.removeTask(taskid);
-        } catch (RemoteException e) {
-            Log.e(TAG, "removeTask failed", e);
-        }
-    }
+//    private void removeTask(int taskid) {
+//        try {
+//            mIAm.removeTask(taskid);
+//        } catch (RemoteException e) {
+//            Log.e(TAG, "removeTask failed", e);
+//        }
+//    }
 
     public void dockTask(TaskDescription ad, boolean close) {
         if (ad.isKilled()) {
@@ -629,9 +635,12 @@ public class SwitchManager {
             hide(true);
         }
         try {
-            ActivityOptions options = makeSplitScreenOptions(true);
-            ActivityManagerNative.getDefault().startActivityFromRecents(
-                        ad.getPersistentTaskId(), options.toBundle());
+//            ActivityOptions options = makeSplitScreenOptions(true);
+//            ActivityManagerNative.getDefault().startActivityFromRecents(
+//                    ad.getPersistentTaskId(), options.toBundle());
+            Activity act = new Activity();
+            act.startActivity(
+                    ad.getIntent());
             if (DEBUG){
                 Log.d(TAG, "dock task " + ad.getLabel());
             }
@@ -639,12 +648,12 @@ public class SwitchManager {
         }
     }
 
-    private ActivityOptions makeSplitScreenOptions(boolean dockTopLeft) {
-        final ActivityOptions options = ActivityOptions.makeBasic();
-        options.setLaunchWindowingMode(WINDOWING_MODE_SPLIT_SCREEN_PRIMARY);
-        options.setSplitScreenCreateMode(dockTopLeft
-                ? SPLIT_SCREEN_CREATE_MODE_TOP_OR_LEFT
-                : SPLIT_SCREEN_CREATE_MODE_BOTTOM_OR_RIGHT);
-        return options;
-    }
+//    private ActivityOptions makeSplitScreenOptions(boolean dockTopLeft) {
+//        final ActivityOptions options = ActivityOptions.makeBasic();
+//        options.setLaunchWindowingMode(WINDOWING_MODE_SPLIT_SCREEN_PRIMARY);
+//        options.setSplitScreenCreateMode(dockTopLeft
+//                ? SPLIT_SCREEN_CREATE_MODE_TOP_OR_LEFT
+//                : SPLIT_SCREEN_CREATE_MODE_BOTTOM_OR_RIGHT);
+//        return options;
+//    }
 }

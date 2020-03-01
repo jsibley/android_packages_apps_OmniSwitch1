@@ -325,7 +325,7 @@ public class SwitchGestureView {
                     mFlingEnable = false;
                     mMoveStarted = false;
 
-                    mRecentsManager.startBoost();
+ //                   mRecentsManager.startBoost();
                     mRecentsManager.clearTasks();
                     RecentTasksLoader.getInstance(mContext).cancelLoadingTasks();
                     RecentTasksLoader.getInstance(mContext).setSwitchManager(mRecentsManager);
@@ -678,13 +678,13 @@ public class SwitchGestureView {
             }
             mRecentsManager.getLayout().resetRecentsState();
             // run back trigger if required
-            if(mVirtualBackKey && !mConfiguration.mRestrictedMode){
-                Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_BACK);
-            }
-            mVirtualBackKey = false;
-            if(mVirtualMenuKey && !mConfiguration.mRestrictedMode){
-                Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_MENU);
-            }
+//            if(mVirtualBackKey && !mConfiguration.mRestrictedMode){
+//                Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_BACK);
+//            }
+//            mVirtualBackKey = false;
+//            if(mVirtualMenuKey && !mConfiguration.mRestrictedMode){
+//                Utils.triggerVirtualKeypress(mHandler, KeyEvent.KEYCODE_MENU);
+//            }
             mVirtualMenuKey = false;
         }
         mShowingSpeedSwitcher = false;
@@ -1238,7 +1238,7 @@ public class SwitchGestureView {
                                 Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    mRecentsManager.toggleLockToApp(false);
+//                    mRecentsManager.toggleLockToApp(false);
                 }});
             return mLockToAppButton;
         }

@@ -75,6 +75,7 @@ public class DetailedWeatherView extends FrameLayout {
     private TextView mCurrentText;
     private View mWeatherLine;
     private TopWidgetView mTopWidget;
+    public Context mContext = getContext();
 
     public DetailedWeatherView(Context context) {
         this(context, null);

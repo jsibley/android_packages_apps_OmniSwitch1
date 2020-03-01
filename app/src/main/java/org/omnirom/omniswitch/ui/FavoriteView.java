@@ -65,6 +65,7 @@ public class FavoriteView extends GridView {
     protected List<String> mFavoriteList;
     private SwitchManager mRecentsManager;
     protected Typeface mLabelFont;
+    public Context mContext = getContext();
 
     public class FavoriteListAdapter extends ArrayAdapter<String> {
 

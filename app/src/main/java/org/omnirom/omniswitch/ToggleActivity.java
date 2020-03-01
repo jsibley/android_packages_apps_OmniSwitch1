@@ -41,8 +41,9 @@ public class ToggleActivity extends Activity {
             shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, icon);
             setResult(RESULT_OK, shortcutIntent);
         } else {
-            sendBroadcastAsUser(new Intent(SwitchService.RecentsReceiver.ACTION_TOGGLE_OVERLAY),
-                    UserHandle.CURRENT_OR_SELF);
+//            sendBroadcastAsUser(new Intent(SwitchService.RecentsReceiver.ACTION_TOGGLE_OVERLAY),
+//                    UserHandle.CURRENT_OR_SELF);
+            sendBroadcast(new Intent(SwitchService.RecentsReceiver.ACTION_TOGGLE_OVERLAY));
         }
         finish();
     }

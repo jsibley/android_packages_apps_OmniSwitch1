@@ -162,34 +162,30 @@ public class Utils {
         return buttonString;
     }
 
-    public static void triggerVirtualKeypress(final Handler handler, final int keyCode) {
+//    public static void triggerVirtualKeypress(final Handler handler, final int keyCode) {
 //        final InputManager im = InputManager.getInstance();
-        final InputManager im = Context.getSystemService(Context.INPUT_SERVICE);
-        UiAutomation mUiAutomation = new UiAutomation(mHandlerThread.getLooper(), new UiAutomationConnection());
-        UiAutomation uiAutomation = getInstrumentation().getUiAutomation();
-        UiDevice.getInstance(InstrumentationRegistry.getInstrumentation()).pressKeyCode(KeyEvent.KEYCODE_V, KeyEvent.META_CTRL_MASK);
-
-        long now = SystemClock.uptimeMillis();
-
-        final KeyEvent downEvent = new KeyEvent(now, now, KeyEvent.ACTION_DOWN,
-              keyCode, 0, 0, KeyCharacterMap.VIRTUAL_KEYBOARD, 0,
-              KeyEvent.FLAG_FROM_SYSTEM | KeyEvent.FLAG_VIRTUAL_HARD_KEY, InputDevice.SOURCE_CLASS_BUTTON);
-        final KeyEvent upEvent = KeyEvent.changeAction(downEvent,
-              KeyEvent.ACTION_UP);
-
-        // add a small delay to make sure everything behind got focus
-        handler.postDelayed(new Runnable(){
-            @Override
-            public void run() {
-                im.injectInputEvent(downEvent,InputManager.INJECT_INPUT_EVENT_MODE_ASYNC);
-            }}, 100);
-
-        handler.postDelayed(new Runnable(){
-            @Override
-            public void run() {
-                im.injectInputEvent(upEvent, InputManager.INJECT_INPUT_EVENT_MODE_ASYNC);
-            }}, 150);
-    }
+//
+//        long now = SystemClock.uptimeMillis();
+//
+//        final KeyEvent downEvent = new KeyEvent(now, now, KeyEvent.ACTION_DOWN,
+//              keyCode, 0, 0, KeyCharacterMap.VIRTUAL_KEYBOARD, 0,
+//              KeyEvent.FLAG_FROM_SYSTEM | KeyEvent.FLAG_VIRTUAL_HARD_KEY, InputDevice.SOURCE_CLASS_BUTTON);
+//        final KeyEvent upEvent = KeyEvent.changeAction(downEvent,
+//              KeyEvent.ACTION_UP);
+//
+//        // add a small delay to make sure everything behind got focus
+//        handler.postDelayed(new Runnable(){
+//            @Override
+//            public void run() {
+//                im.injectInputEvent(downEvent,InputManager.INJECT_INPUT_EVENT_MODE_ASYNC);
+//            }}, 100);
+//
+//        handler.postDelayed(new Runnable(){
+//            @Override
+//            public void run() {
+//                im.injectInputEvent(upEvent, InputManager.INJECT_INPUT_EVENT_MODE_ASYNC);
+//            }}, 150);
+//    }
 
     public static void toggleImmersiveMode(Context context) {
         /*boolean immersive = Settings.System.getInt(context.getContentResolver(),
@@ -218,12 +214,12 @@ public class Utils {
     }
 
     public static boolean isLockToAppEnabled(Context context) {
-        try {
-            return Settings.System.getInt(context.getContentResolver(), Settings.System.LOCK_TO_APP_ENABLED)
-                != 0;
-        } catch (SettingNotFoundException e) {
+//        try {
+//            return Settings.System.getInt(context.getContentResolver(), Settings.System.LOCK_TO_APP_ENABLED)
+//                != 0;
+//        } catch (SettingNotFoundException e) {
             return false;
-        }
+//        }
     }
 
      public static boolean isInLockTaskMode() {
@@ -400,29 +396,29 @@ public class Utils {
                 && pm.resolveActivity(PHONE_INTENT, 0) != null;
     }
 
-    public static void openPhone(Context context) {
-        if (!isPhoneVisible(context)) {
-            return;
-        }
-        final TelecomManager tm = TelecomManager.from(context);
-        if (tm.isInCall()) {
-            AsyncTask.execute(new Runnable() {
-                @Override
-                public void run() {
-                    tm.showInCallScreen(false /* showDialpad */);
-                }
-            });
-        } else {
-            String dialer = tm.getDefaultDialerPackage();
-            if (TextUtils.isEmpty(dialer)) {
-                dialer = "com.android.dialer";
-            }
-            final Intent phoneIntent = context.getPackageManager().getLaunchIntentForPackage(dialer);
-            phoneIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                    | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-            context.startActivity(phoneIntent);
-        }
-    }
+//    public static void openPhone(Context context) {
+//        if (!isPhoneVisible(context)) {
+//            return;
+//        }
+//        final TelecomManager tm = TelecomManager.from(context);
+//        if (tm.isInCall()) {
+//            AsyncTask.execute(new Runnable() {
+//                @Override
+//                public void run() {
+//                    tm.showInCallScreen(false /* showDialpad */);
+//                }
+//            });
+//        } else {
+//            String dialer = tm.getDefaultDialerPackage();
+//            if (TextUtils.isEmpty(dialer)) {
+//                dialer = "com.android.dialer";
+//            }
+//            final Intent phoneIntent = context.getPackageManager().getLaunchIntentForPackage(dialer);
+//            phoneIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+//                    | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+//            context.startActivity(phoneIntent);
+//        }
+//    }
 
     public static Typeface getAppLabelFont() {
         return Typeface.create("sans-serif-condensed", Typeface.NORMAL);

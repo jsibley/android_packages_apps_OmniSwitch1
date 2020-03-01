@@ -35,8 +35,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
-import com.android.internal.view.menu.MenuBuilder;
-import com.android.internal.view.menu.MenuPopupHelper;
+//import com.android.internal.view.menu.MenuBuilder;
+//import com.android.internal.view.menu.MenuPopupHelper;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -55,8 +55,8 @@ import org.omnirom.omniswitch.R;
 public class ContextMenuUtils {
     private static final int FIRST_SHORTCUT_MENU = Integer.MAX_VALUE - 100;
 
-    public static void handleLongPressFavorite(Context context, PackageManager.PackageItem packageItem,
-            View view, SwitchManager recentsManager, List favoriteList) {
+    public static void handleLongPressFavorite(final Context context, final PackageManager.PackageItem packageItem,
+            View view, final SwitchManager recentsManager, final List favoriteList) {
         final SwitchConfiguration configuration = SwitchConfiguration.getInstance(context);
         final DeepShortcutManager shortcutManager = new DeepShortcutManager(context);
         final Context wrapper = new ContextThemeWrapper(context,
@@ -64,7 +64,7 @@ public class ContextMenuUtils {
         final PopupMenu popup = new PopupMenu(wrapper, view);
         popup.getMenuInflater().inflate(R.menu.favorite_popup_menu,
                 popup.getMenu());
-        Map<Integer, ShortcutInfo> scMap = new HashMap<>();
+        final Map<Integer, ShortcutInfo> scMap = new HashMap<>();
         if (shortcutManager.hasHostPermission()) {
             List<ShortcutInfo> shortcuts = shortcutManager.queryForShortcutsContainer(
                     packageItem.getIntentRaw().getComponent(), null);
@@ -112,16 +112,17 @@ public class ContextMenuUtils {
             }
         });
         if (scMap.size() != 0) {
-            MenuPopupHelper menuHelper = new MenuPopupHelper(wrapper, (MenuBuilder) popup.getMenu(), view);
-            menuHelper.setForceShowIcon(true);
-            menuHelper.show();
+//            MenuPopupHelper menuHelper = new MenuPopupHelper(wrapper, (MenuBuilder) popup.getMenu(), view);
+//            menuHelper.setForceShowIcon(true);
+//            menuHelper.show();
+            popup.show();
         } else {
             popup.show();
         }
     }
 
-    public static void handleLongPressAppDrawer(Context context, final
-            PackageManager.PackageItem packageItem, SwitchManager recentsManager, View view) {
+    public static void handleLongPressAppDrawer(final Context context, final
+            PackageManager.PackageItem packageItem, final SwitchManager recentsManager, View view) {
         final SwitchConfiguration configuration = SwitchConfiguration.getInstance(context);
         final DeepShortcutManager shortcutManager = new DeepShortcutManager(context);
         final Context wrapper = new ContextThemeWrapper(context,
@@ -135,7 +136,7 @@ public class ContextMenuUtils {
             popup.getMenu().removeItem(R.id.package_add_favorite);
         }
 
-        Map<Integer, ShortcutInfo> scMap = new HashMap<>();
+        final Map<Integer, ShortcutInfo> scMap = new HashMap<>();
         if (shortcutManager.hasHostPermission()) {
             List<ShortcutInfo> shortcuts = shortcutManager.queryForShortcutsContainer(
                     packageItem.getIntentRaw().getComponent(), null);
@@ -186,9 +187,10 @@ public class ContextMenuUtils {
             }
         });
         if (scMap.size() != 0) {
-            MenuPopupHelper menuHelper = new MenuPopupHelper(wrapper, (MenuBuilder) popup.getMenu(), view);
-            menuHelper.setForceShowIcon(true);
-            menuHelper.show();
+//            MenuPopupHelper menuHelper = new MenuPopupHelper(wrapper, (MenuBuilder) popup.getMenu(), view);
+//            menuHelper.setForceShowIcon(true);
+//            menuHelper.show();
+            popup.show();
         } else {
             popup.show();
         }

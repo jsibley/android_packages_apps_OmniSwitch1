@@ -222,9 +222,9 @@ public class Launcher extends Activity implements IEditFavoriteActivity,
         mWallpaperManager.addOnColorsChangedListener(this, mHandler);
         WallpaperColors wallpaperColors = mWallpaperManager.getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
 
-        boolean supportsDarkText = wallpaperColors != null
+        boolean supportsDarkText = /*wallpaperColors != null
                 ? (wallpaperColors.getColorHints()
-                & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) > 0 : false;
+                & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) > 0 :*/ false;
         int themeRes = getActivityThemeRes(supportsDarkText);
         if (themeRes != mThemeRes) {
             mThemeRes = themeRes;
@@ -363,7 +363,7 @@ public class Launcher extends Activity implements IEditFavoriteActivity,
         mPhoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.openPhone(Launcher.this);
+//                Utils.openPhone(Launcher.this);
             }
         });
 
@@ -836,24 +836,24 @@ public class Launcher extends Activity implements IEditFavoriteActivity,
         startActivity(cameraIntent);
     }
 
-    private Intent getVoiceAssistIntent() {
-        final Intent assistIntent = new Intent(Intent.ACTION_VOICE_ASSIST);
-        assistIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                // that will always trigger the voice search page
-                | Intent.FLAG_ACTIVITY_CLEAR_TASK
-                | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-        return assistIntent;
-    }
-
-    private void launchVoiceAssist() {
-        if (canLaunchVoiceAssist()) {
-            startActivity(getVoiceAssistIntent());
-        }
-    }
-
-    private boolean canLaunchVoiceAssist() {
-        return Utils.canResolveIntent(this, getVoiceAssistIntent());
-    }
+//    private Intent getVoiceAssistIntent() {
+//        final Intent assistIntent = new Intent(Intent.ACTION_VOICE_ASSIST);
+//        assistIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+//                // that will always trigger the voice search page
+//                | Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+//        return assistIntent;
+//    }
+//
+//    private void launchVoiceAssist() {
+//        if (canLaunchVoiceAssist()) {
+//            startActivity(getVoiceAssistIntent());
+//        }
+//    }
+//
+//    private boolean canLaunchVoiceAssist() {
+//        return Utils.canResolveIntent(this, getVoiceAssistIntent());
+//    }
 
     private Intent getAssistIntent() {
         final Intent assistIntent = new Intent(Intent.ACTION_ASSIST);
@@ -979,9 +979,9 @@ public class Launcher extends Activity implements IEditFavoriteActivity,
     @Override
     public void onColorsChanged(WallpaperColors wallpaperColors, int which) {
         if (DEBUG) Log.d(TAG, "onColorsChanged");
-        boolean supportsDarkText = wallpaperColors != null
+        boolean supportsDarkText = /*wallpaperColors != null
             ? (wallpaperColors.getColorHints()
-            & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) > 0 : false;
+            & WallpaperColors.HINT_SUPPORTS_DARK_TEXT) > 0 :*/ false;
         int themeRes = getActivityThemeRes(supportsDarkText);
         if (themeRes != mThemeRes) {
             recreate();

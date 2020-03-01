@@ -31,7 +31,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -71,7 +71,8 @@ public class IconShapeOverride {
             Resources override =
                     new ResourcesOverride(Resources.getSystem(), getConfigResId(), iconShape);
             getSystemResField().set(null, override);
-            Log.d(TAG, "config_icon_mask = " + Resources.getSystem().getString(com.android.internal.R.string.config_icon_mask));
+//            Log.d(TAG, "config_icon_mask = " + Resources.getSystem().getString(com.android.internal.R.string.config_icon_mask));
+            Log.d(TAG, "config_icon_mask = " + Resources.getSystem().getIdentifier("config_icon_mask", "string", "android"));
         } catch (Exception e) {
             Log.e(TAG, "Unable to override icon shape", e);
         }
@@ -99,7 +100,7 @@ public class IconShapeOverride {
             mOverrideValue = overrideValue;
         }
 
-        @NonNull
+//        @NonNull
         @Override
         public String getString(int id) throws NotFoundException {
             if (id == mOverrideId && !TextUtils.isEmpty(mOverrideValue)) {

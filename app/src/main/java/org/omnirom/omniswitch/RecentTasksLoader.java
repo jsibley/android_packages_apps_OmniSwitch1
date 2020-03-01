@@ -192,7 +192,7 @@ public class RecentTasksLoader {
         mState = State.IDLE;
     }
 
-    public void loadTasksInBackground(int maxNumTasks, boolean withIcons, boolean withThumbs) {
+    public void loadTasksInBackground(final int maxNumTasks, final boolean withIcons, final boolean withThumbs) {
         if (mPreloaded && mState != State.IDLE) {
             if (DEBUG) {
                 Log.d(TAG, "recents preloaded: waiting for done");
@@ -252,7 +252,8 @@ public class RecentTasksLoader {
                 Process.setThreadPriority(Process.THREAD_PRIORITY_FOREGROUND);
 
                 final List<ActivityManager.RecentTaskInfo> recentTasks = mActivityManager
-                        .getRecentTasks(maxNumTasks == 0 ? ActivityManager.getMaxRecentTasksStatic() : maxNumTasks,
+//                        .getRecentTasks(maxNumTasks == 0 ? ActivityManager.getMaxRecentTasksStatic() : maxNumTasks,
+                        .getRecentTasks(maxNumTasks == 0 ? maxNumTasks : maxNumTasks,
                                 ActivityManager.RECENT_IGNORE_UNAVAILABLE |
                                 ActivityManager.RECENT_WITH_EXCLUDED);
 
@@ -274,10 +275,11 @@ public class RecentTasksLoader {
                     if (DEBUG) {
                         Log.d(TAG, "" + i + " recent item = " + recentInfo.baseIntent + " " + recentInfo.taskDescription.getLabel());
                     }
-                    TaskDescription item = createTaskDescription(recentInfo.id,
-                            recentInfo.persistentId, recentInfo.stackId,
+                    TaskDescription item = createTaskDescription(recentInfo.taskId,
+                            recentInfo.taskId, recentInfo.taskId,
                             recentInfo.baseIntent, recentInfo.origActivity,
-                            recentInfo.supportsSplitScreenMultiWindow);
+//                            recentInfo.supportsSplitScreenMultiWindow);
+                            Boolean.FALSE);
 
                     if (item == null) {
                         continue;
@@ -294,7 +296,8 @@ public class RecentTasksLoader {
 
                     if (taskDescription != null) {
                         item.setTaskPrimaryColor(taskDescription.getPrimaryColor());
-                        item.setTaskBackgroundColor(taskDescription.getBackgroundColor());
+//                        item.setTaskBackgroundColor(taskDescription.getBackgroundColor());
+                        item.setTaskBackgroundColor(taskDescription.getPrimaryColor());
                     }
 
                     // Don't load the current home activity.
@@ -311,7 +314,8 @@ public class RecentTasksLoader {
                     boolean activeTask = true;
                     // never time filter locked tasks
                     if (mConfiguration.mFilterActive && !item.isLocked()) {
-                        long lastActiveTime = recentInfo.lastActiveTime;
+//                        long lastActiveTime = recentInfo.lastActiveTime;
+                        long lastActiveTime = 0;
                         if (DEBUG) {
                             Log.d(TAG, intent.getComponent().getPackageName() + ": " + lastActiveTime + ":" + currentTime);
                         }
@@ -387,17 +391,17 @@ public class RecentTasksLoader {
     }
 
     public Bitmap getThumbnail(int taskId, boolean reducedResolution, boolean firstThumb) {
-        try {
-            ActivityManager.TaskSnapshot snapshot = ActivityManager.getService().getTaskSnapshot(taskId, reducedResolution);
-            if (snapshot != null) {
-                if (DEBUG) {
-                    Log.d(TAG, "getThumbnail " + taskId);
-                }
-                return Bitmap.wrapHardwareBuffer(snapshot.getSnapshot(), snapshot.getColorSpace());
-            }
-        } catch (RemoteException e) {
-            Log.w(TAG, "Failed to retrieve snapshot", e);
-        }
+//        try {
+//            ActivityManager.TaskSnapshot snapshot = ActivityManager.getService().getTaskSnapshot(taskId, reducedResolution);
+//            if (snapshot != null) {
+//                if (DEBUG) {
+//                    Log.d(TAG, "getThumbnail " + taskId);
+//                }
+//                return Bitmap.wrapHardwareBuffer(snapshot.getSnapshot(), snapshot.getColorSpace());
+//            }
+//        } catch (RemoteException e) {
+//            Log.w(TAG, "Failed to retrieve snapshot", e);
+//        }
         return null;
     }
 
@@ -526,9 +530,10 @@ public class RecentTasksLoader {
     }
 
     private boolean hasSystemPermission(Context context) {
-        int result = context
-                .checkCallingOrSelfPermission(android.Manifest.permission.READ_FRAME_BUFFER);
-        return result == android.content.pm.PackageManager.PERMISSION_GRANTED;
+//        int result = context
+//                .checkCallingOrSelfPermission(android.Manifest.permission.READ_FRAME_BUFFER);
+//        return result == android.content.pm.PackageManager.PERMISSION_GRANTED;
+        return true;
     }
 
     public Bitmap getDefaultThumb() {

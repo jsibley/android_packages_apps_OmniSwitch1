@@ -66,6 +66,7 @@ public class AppDrawerView extends GridView {
     private SwitchManager mRecentsManager;
     protected Typeface mLabelFont;
     private List<PackageManager.PackageItem> mFilteredPackagesList;
+    public Context mContext = getContext();
 
     public class AppDrawerListAdapter extends
             ArrayAdapter<PackageManager.PackageItem> {

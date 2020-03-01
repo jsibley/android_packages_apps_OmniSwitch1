@@ -27,6 +27,7 @@ import org.omnirom.omniswitch.SwitchConfiguration;
 public class FavoriteViewVertical extends ListView {
 
     private SwitchConfiguration mConfiguration;
+    private Context mContext = getContext();
 
     public FavoriteViewVertical(Context context, AttributeSet attrs) {
         super(context, attrs);
